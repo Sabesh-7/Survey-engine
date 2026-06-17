@@ -1,0 +1,27 @@
+services:
+  api:
+    build: .
+    environment:
+      - DATABASE_URL=postgresql+psycopg://survey:survey@db:5432/survey_intelligence
+      - LOG_LEVEL=INFO
+      - QWEN_BASE_URL=http://qwen:8000
+      - QWEN_MODEL_NAME=qwen3
+      - EMBEDDINGS_MODEL_NAME=bge-m3
+      - EMBEDDINGS_DIM=1024
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      - POSTGRES_USER=survey
+      - POSTGRES_PASSWORD=survey
+      - POSTGRES_DB=survey_intelligence
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

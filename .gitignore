@@ -1,0 +1,77 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+*.log
+logs/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local databases
+*.db
+*.sqlite3
+
+# Model cache
+models/
+cache/
+.huggingface/
+sentence_transformers/
+
+# Ollama
+ollama_models/
+
+# Temporary
+tmp/
+temp/
+
+# Generated files
+reports/
+exports/
+
+# Secrets
+secrets/
+credentials.json
+
+# MyPy
+.mypy_cache/
+
+# Ruff
+.ruff_cache/
+
+# Audit exports
+audit_exports/
+__pycache__/
+*.pyc
+.pytest_cache/
